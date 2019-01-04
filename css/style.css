@@ -1,17 +1,25 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     margin: 0 auto;
     font-family: "Open Sans";
 }
+
 h1, h2, h3, h4, h5, h6, p {
     margin: 0;
 }
+
 ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
+}
+.clear::after {
+    content: '';
+    display: block;
+    clear: both;
 }
 .container {
     width: 1010px;
@@ -31,6 +39,8 @@ header .menu {
 }
 
 header .menu li {
+    display: inline-block;
+    margin-right: 18px;
 }
 
 header .menu li a {
@@ -78,66 +88,116 @@ header .basket {
 header .basket span {
     color: #1a9547;
 }
+
 header [class*='icon'] {
-        color: #caebd4;
+    color: #caebd4;
 }
+
 header .login [class*="icon"] {
     font-size: 18px;
 }
+
 header .phone [class*="icon"] {
     font-size: 20px;
 }
+
 .banner .sale {
     width: 305px;
     height: 360px;
 }
+
 .banner .slider {
     width: 640px;
     height: 360px;
 }
-.banner>div {
+
+.banner > div {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+.advantages {
+    width: calc(100% - 320px);
+    float: left;
+}
+.advantages .item {
+    width: 25%;
+    float: left;
 }
 .advantages .item span {
     font-size: 14px;
     font-weight: bold;
     line-height: 17px;
     color: #333333;
+    display: block;
 }
+
 .advantages .item p {
     font-size: 12px;
     line-height: 14px;
     color: #666666;
 }
+.subscribe {
+    width: 320px;
+    float: left;
+}
 .subscribe label {
     font-size: 16px;
     color: #ffffff;
 }
+
 .subscribe input {
     font-size: 13px;
     line-height: 37px;
     color: #999999;
 }
+
 .subscribe button {
     font-size: 13px;
     line-height: 37px;
     text-align: center;
     color: #ffffff;
 }
+
 .subscribe .wrap span {
     font-size: 12px;
-    color: rgba(255,255,255,0.5);
+    color: rgba(255, 255, 255, 0.5);
 }
+
 .filter li {
     font-size: 13px;
     line-height: 16px;
     border-bottom: 1px dashed #666666;
+    display: inline-block;
+}
+.filter li+li {
+    margin-left: 18px;
 }
 .filter li a {
     text-decoration: none;
     color: #666666;
+}
+.card {
+    position: relative;
+}
+.status {
+    position: absolute;
+    display: block;
+    top: -3px;
+    left: -3px;
+    width: 43px;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+}
+.status.hit {
+    background-color: #6eddcc;
+}
+.status.discount {
+    background-color: #ffed03;
+}
+.status.new {
+    background-color: #78ec71;
 }
 .card .img {
     width: 220px;
@@ -146,22 +206,26 @@ header .phone [class*="icon"] {
     background-repeat: no-repeat;
     background-position: center;
 }
+
 .card .title {
     font-size: 15px;
     line-height: 22px;
     color: #333333;
 }
+
 .card a {
     font-size: 15px;
     line-height: 22px;
     color: #0069b4;
 }
+
 .card .price {
     font-size: 20px;
     font-weight: 600;
     line-height: 30px;
     color: #333333;
 }
+
 .card .price .old {
     font-size: 14px;
     font-weight: normal;
@@ -169,12 +233,14 @@ header .phone [class*="icon"] {
     text-decoration: line-through;
     color: #666666;
 }
+
 .card button {
     font-size: 14px;
     line-height: 32px;
     text-align: center;
     color: #ffffff;
 }
+
 .widgets h1 {
     font-size: 18px;
     font-weight: 600;
@@ -182,53 +248,199 @@ header .phone [class*="icon"] {
     text-align: center;
     color: #666666;
 }
+
 .widgets .item:first-child {
     width: 290px;
     height: 400px;
 }
+
 .widgets .item:last-child {
     width: 290px;
     height: 400px;
 }
+
 .widgets .item:nth-child(2) {
     width: 350px;
     height: 400px;
 }
+
 .widgets .item {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
+
 .tabs li a {
     font-size: 14px;
     text-decoration: none;
     line-height: 45px;
     color: #999999;
 }
+
 .tabContent .title {
     text-transform: uppercase;
 }
+
 .tabContent p {
     font-size: 12px;
     line-height: 18px;
     color: #333333;
 }
+
 footer {
     font-size: 13px;
     line-height: 22px;
     color: #ffffff;
+    background-color: #64ba4a;
 }
+
 footer a {
     text-decoration: none;
     color: #ffffff;
 }
+
 footer [class*="icon"] {
     font-size: 21px;
 }
+.footMenu {
+    width: 50%;
+    float: left;
+}
+.footMenu .col {
+    width: 50%;
+    float: left;
+}
+.footCont {
+    width: 25%;
+    float: left;
+}
+.copyright {
+    width: 25%;
+    float: left;
+}
 
+/*КОРПОРАТИВНЫМ КЛИЕНТАМ*/
+.wrapper .left p {
+    font-size: 13px;
+    line-height: 22px;
+    color: #333333;
+}
 
+.wrapper .left .orgInfo {
+    font-size: 13px;
+    line-height: 22px;
+    color: #666666;
+    font-style: italic;
+}
 
+.radioTitle span:first-child {
+    font-size: 13px;
+    color: #666666;
+}
 
+.radioTitle span:last-child {
+    font-size: 11px;
+    color: #666666;
+}
+
+form ul li label {
+    font-style: normal;
+    font-size: 13px;
+    line-height: 22px;
+    color: #666666;
+}
+
+.attachLogo label {
+    font-size: 13px;
+    line-height: 22px;
+    color: #229647;
+    text-decoration: underline;
+}
+
+.attachLogo span {
+    font-size: 11px;
+    color: #999999;
+}
+
+.quantityDate label {
+    font-size: 13px;
+    line-height: 22px;
+    color: #666666;
+    font-style: italic;
+}
+
+.area label {
+    font-size: 13px;
+    line-height: 22px;
+    color: #666666;
+    font-style: italic;
+}
+
+.left button {
+    font-size: 14px;
+    line-height: 22px;
+    color: #ffffff;
+}
+
+.right span {
+    font-size: 25px;
+    line-height: 22px;
+    color: #333333;
+}
+
+.right p {
+    font-size: 13px;
+    line-height: 22px;
+    color: #333333;
+}
+
+.right button {
+    font-size: 14px;
+    line-height: 22px;
+    color: #ffffff;
+}
+
+/*ОФОРМЛЕНИЕ ЗАКАЗА*/
+h1 {
+    font-size: 25px;
+    line-height: 22px;
+    color: #333333;
+}
+
+h2 {
+    font-size: 15px;
+    line-height: 22px;
+    color: #333333;
+}
+
+.cityChoose label, fieldset label {
+    font-size: 13px;
+    line-height: 22px;
+    color: #666666;
+    font-style: italic;
+}
+
+fieldset label {
+    font-size: 13px;
+    line-height: 19px;
+    color: #333333;
+}
+
+fieldset p {
+    font-size: 12px;
+    line-height: 19px;
+    color: #666666;
+}
+
+.red {
+    color: red;
+}
+
+button {
+    font-size: 14px;
+    line-height: 22px;
+    color: #ffffff;
+}
 
 /*НОВОСТИ ПОДРОБНО*/
 .breadcrumps li a, .breadcrumps li {
@@ -237,29 +449,35 @@ footer [class*="icon"] {
     color: #999999;
     text-decoration: none;
 }
+
 .firstCap {
     font-size: 25px;
     line-height: 22px;
     color: #333333;
     font-weight: 600;
-}.secCap {
-     font-size: 18px;
-     line-height: 22px;
-     color: #333333;
-     font-weight: 600;
- }
- .newsDate {
-     font-size: 12px;
-     line-height: 22px;
-     color: #aaaaaa;
- }
- .newsTxt {
-     font-size: 13px;
-     line-height: 19px;
-     color: #333333;
- }
- .moreNews {
-     font-size: 13px;
-     line-height: 22px;
-     color: #0069b4;
- }
+}
+
+.secCap {
+    font-size: 18px;
+    line-height: 22px;
+    color: #333333;
+    font-weight: 600;
+}
+
+.newsDate {
+    font-size: 12px;
+    line-height: 22px;
+    color: #aaaaaa;
+}
+
+.newsTxt {
+    font-size: 13px;
+    line-height: 19px;
+    color: #333333;
+}
+
+.moreNews {
+    font-size: 13px;
+    line-height: 22px;
+    color: #0069b4;
+}
