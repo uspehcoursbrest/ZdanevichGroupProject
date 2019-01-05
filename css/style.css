@@ -26,6 +26,13 @@ ul {
     margin: 0 auto;
     padding: 0 15px;
 }
+.table {
+    display: table;
+    width: 100%;
+}
+.tCell {
+    display: table-cell;
+}
 
 /*ГЛАВНАЯ*/
 header .login {
@@ -33,7 +40,16 @@ header .login {
     line-height: 18px;
     color: #0069b4;
 }
-
+header .left, header .logo, header .right {
+    width: 33.3333%;
+    vertical-align: top;
+}
+header .logo {
+    text-align: center;
+}
+header .right {
+    text-align: right;
+}
 header .menu {
 
 }
@@ -48,11 +64,9 @@ header .menu li a {
     line-height: 18px;
     color: #333333;
 }
-
 .logo {
 
 }
-
 header .phone {
     font-size: 20px;
     line-height: 20px;
@@ -66,6 +80,8 @@ header .callback {
     text-decoration: none;
     color: #0069b4;
     border-bottom: 1px dashed #0069b4;
+    display: table;
+    margin-left: auto;
 }
 
 header .timing {
@@ -100,7 +116,10 @@ header .login [class*="icon"] {
 header .phone [class*="icon"] {
     font-size: 20px;
 }
-
+.banner {
+    display: flex;
+    justify-content: space-between;
+}
 .banner .sale {
     width: 305px;
     height: 360px;
@@ -140,6 +159,8 @@ header .phone [class*="icon"] {
 .subscribe {
     width: 320px;
     float: left;
+    padding: 20px;
+    background-color: #64ba4a;
 }
 .subscribe label {
     font-size: 16px;
@@ -150,18 +171,35 @@ header .phone [class*="icon"] {
     font-size: 13px;
     line-height: 37px;
     color: #999999;
+    width: 100%;
+    margin-top: 15px;
+    padding-left: 12px;
+    border: none;
 }
 
 .subscribe button {
     font-size: 13px;
     line-height: 37px;
+    width: 188px;
     text-align: center;
     color: #ffffff;
+    display: table-cell;
+    vertical-align: middle;
+    background-color: #259c47;
+    border: none;
 }
-
+.subscribe .wrap {
+    display: table;
+    width: 100%;
+    margin-top: 10px;
+}
 .subscribe .wrap span {
     font-size: 12px;
+    padding-left: 20px;
     color: rgba(255, 255, 255, 0.5);
+    display: table-cell;
+    vertical-align: middle;
+
 }
 
 .filter li {
@@ -199,8 +237,13 @@ header .phone [class*="icon"] {
 .status.new {
     background-color: #78ec71;
 }
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+}
 .card .img {
-    width: 220px;
+    width: 100%;
     height: 220px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -211,6 +254,7 @@ header .phone [class*="icon"] {
     font-size: 15px;
     line-height: 22px;
     color: #333333;
+    display: block;
 }
 
 .card a {
@@ -233,14 +277,28 @@ header .phone [class*="icon"] {
     text-decoration: line-through;
     color: #666666;
 }
-
 .card button {
     font-size: 14px;
     line-height: 32px;
     text-align: center;
     color: #ffffff;
+    float: right;
+    border: none;
 }
-
+.card .content {
+    min-height: 110px;
+    position: relative;
+}
+.card .buy {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom: 10px;
+}
+.widgets .wrap {
+    display: flex;
+    justify-content: space-between;
+}
 .widgets h1 {
     font-size: 18px;
     font-weight: 600;
